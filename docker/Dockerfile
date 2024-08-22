@@ -5,7 +5,7 @@ FROM --platform=$TARGETPLATFORM debian:bookworm-slim
 ARG TARGETPLATFORM
 
 # Update and install necessary packages
-RUN apt-get update && apt-get install -y \
+RUN set -x && apt-get update && apt-get install -y \
     python3 \
     python3-pip \
     python3-venv \
